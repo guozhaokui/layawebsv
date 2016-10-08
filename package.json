@@ -1,6 +1,6 @@
 {
   "name": "layawebsv",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "http server for layabox project",
   "main": "server.js",
   "bin": {
@@ -13,7 +13,7 @@
   "dependencies": {
     "express": "3.4.x",
     "ejs": "0.8.x",
-    "body-parser":"1.12.x"
+    "body-parser": "1.12.x"
   },
   "repository": {
     "type": "git",
