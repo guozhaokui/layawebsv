@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "http server for layabox project",
   "main": "server.js",
+  "bin": {
+    "layawebsv": "server.js"
+  },  
   "scripts": {
     "test": "test",
     "start": "node server.js"
