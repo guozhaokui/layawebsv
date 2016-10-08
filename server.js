@@ -31,9 +31,12 @@ app.use(function(req,res,next){
 	next();
 });
 
-app.use(express.bodyParser());
+var bodyParser = require('body-parser');
+app.use(express.compress());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/',express.static(__dirname+'/'+mainPath));
+var staticPath = path.isAbsolute(mainPath)?mainPath:(__dirname+'/'+mainPath);
+app.use('/',express.static(staticPath));
 app.use('/payapp',function(req,res,next){
 	log("mytext="+req.body.myText);
 	var postdata='';
