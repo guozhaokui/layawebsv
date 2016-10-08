@@ -1,18 +1,18 @@
 {
   "name": "layawebsv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "http server for layabox project",
   "main": "server.js",
   "bin": {
     "layawebsv": "server.js"
-  },  
+  },
   "scripts": {
     "test": "test",
     "start": "node server.js"
   },
   "dependencies": {
-      "express":"3.4.x",
-      "ejs":"0.8.x"
+    "express": "3.4.x",
+    "ejs": "0.8.x"
   },
   "repository": {
     "type": "git",
