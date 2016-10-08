@@ -4,7 +4,7 @@
   "description": "http server for layabox project",
   "main": "server.js",
   "bin": {
-    "layawebsv": "server.js"
+    "layawebsv": "exe.js"
   },
   "scripts": {
     "test": "test",
