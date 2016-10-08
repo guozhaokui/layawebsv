@@ -35,7 +35,7 @@ var bodyParser = require('body-parser');
 app.use(express.compress());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-var staticPath = path.isAbsolute(mainPath)?mainPath:(__dirname+'/'+mainPath);
+var staticPath = path.isAbsolute(mainPath)?mainPath:path.resolve(process.cwd(), mainPath);
 app.use('/',express.static(staticPath));
 app.use('/payapp',function(req,res,next){
 	log("mytext="+req.body.myText);
