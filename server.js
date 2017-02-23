@@ -67,8 +67,8 @@ log('listen on: '+port);
 
 if(port==443){
     var options = {
-      key: fs.readFileSync('./key.pem'),
-      cert: fs.readFileSync('./cert.pem')
+      key: fs.readFileSync(__dirname+'/key.pem'),
+      cert: fs.readFileSync(__dirname+'/cert.pem')
     };    
     https.createServer(options, app).listen(443);    
 }else{
