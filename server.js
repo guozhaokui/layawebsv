@@ -6,6 +6,7 @@ function log(m){
 var express = require('express');
 var ejs = require('ejs');
 var http = require('http');
+var https = require('https');
 var app = express();
 var path = require('path');
 var fs = require('fs');
@@ -63,4 +64,14 @@ var port = 8889;
 if( process.argv && process.argv[2])
 	port = process.argv[2];
 log('listen on: '+port);
-app.listen( port);
+
+if(port==443){
+    var options = {
+      key: fs.readFileSync('./key.pem'),
+      cert: fs.readFileSync('./cert.pem')
+    };    
+    https.createServer(options, app).listen(443);    
+}else{
+    app.listen( port);
+}
+
