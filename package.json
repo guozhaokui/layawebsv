@@ -1,6 +1,6 @@
 {
   "name": "layawebsv",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "http server for layabox project",
   "main": "server.js",
   "bin": {
